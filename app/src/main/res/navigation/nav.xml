@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/page_admin_citas">
+
+    <fragment
+        android:id="@+id/page_admin_citas"
+        android:name="com.example.agendaapp.AdminCitasFragment"
+        tools:layout="@layout/fragment_admin_citas" />
+
+    <fragment
+        android:id="@+id/page_agenda"
+        android:name="com.example.agendaapp.AgendaFragment"
+        tools:layout="@layout/fragment_agenda" />
+
+</navigation>
