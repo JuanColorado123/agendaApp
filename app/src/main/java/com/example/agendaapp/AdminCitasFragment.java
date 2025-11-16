@@ -24,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -142,6 +143,21 @@ public class AdminCitasFragment extends Fragment implements CitasAdapter.OnItemC
         TextView tvTituloAlert, tvHora;
         ImageButton ibtnHora;
         Spinner spiDias;
+
+        RadioGroup rgMetodoPago;
+        LinearLayout layoutTarjeta;
+
+        rgMetodoPago = vista.findViewById(R.id.rgMetodoPago);
+        layoutTarjeta = vista.findViewById(R.id.layoutTarjeta);
+
+        rgMetodoPago.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == R.id.rbDineroVirtual) {
+                layoutTarjeta.setVisibility(View.VISIBLE);
+            } else {
+                layoutTarjeta.setVisibility(View.GONE);
+            }
+        });
+
 
         etNomCliente = vista.findViewById(R.id.etNomCliente);
         etTelCliente = vista.findViewById(R.id.etTelCliente);

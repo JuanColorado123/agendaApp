@@ -1,5 +1,6 @@
 package com.example.agendaapp;
 
+import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.agendaapp.database.AppDatabase;
 import com.example.agendaapp.databinding.FragmentAgendaBinding;
@@ -71,6 +73,16 @@ public class AgendaFragment extends Fragment {
             });
         });
     }
+    private void abrirDialogoAgregarCita() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.alert_dialog_add_update_cita, null);
+
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 
     private void obtenerCitasDia() {
         for (Cita cita : listaCitas) {

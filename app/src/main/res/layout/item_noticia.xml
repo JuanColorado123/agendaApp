@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvNumeroNoticia"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTituloNoticia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título de la noticia aquí"
+            android:textSize="14sp"
+            android:textColor="#2C3E50"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="3"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tvFuenteNoticia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fuente"
+                android:textSize="10sp"
+                android:textColor="#7F8C8D" />
+
+            <TextView
+                android:id="@+id/tvFechaNoticia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textSize="10sp"
+                android:textColor="#95A5A6" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
